@@ -22,8 +22,10 @@ const unauthenticated_menu=[
 
 //This global variable sets the menu items for an autheticated user.  
 const authenticated_menu=[
+    
     //The autheticated user is presented with the "Home" and "Locations" (defined in the nav_menu global variable).
     {menu:nav_menu},
+    
     //this empty object inserts a horizontal line in the navigation menu panel
     {},
     //The authenticated user is also presented with additional menu options.
@@ -41,6 +43,13 @@ const authenticated_menu=[
 
 ]
 
+const student_menu=[
+    {menu:nav_menu},
+    {label:"Grades",function:"navigate({fn:'show_grades'})"},
+    {label:"Classes",function:"navigate({fn:'show_classes'})"},
+    {label:"Progress",function:"navigate({fn:'show_progress'})"},
+    {label:"Logout",function:"logout()", home:"Logout"},
+]
 
 function show_home(){
     
